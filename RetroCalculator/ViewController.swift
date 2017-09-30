@@ -89,7 +89,6 @@ class ViewController: UIViewController {
         outputLabel.text = "0"
     }
     
-
     func processOperation(operation: Operations) {
         playSound()
         if currentOperation != Operations.Empty {
@@ -118,7 +117,6 @@ class ViewController: UIViewController {
             currentOperation = operation
         }
     }
-
 
 }
 
