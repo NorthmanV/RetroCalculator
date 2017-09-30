@@ -99,7 +99,6 @@ class ViewController: UIViewController {
         playSound()
         if currentOperation != Operations.Empty {
             // A user selected an operator, but then selected  another operator without first entering number
-            
             if runningNumber != "" {
                 rightValueString = runningNumber
                 runningNumber = ""
@@ -113,6 +112,10 @@ class ViewController: UIViewController {
                     result = "\(Double(leftValueString)! + Double(rightValueString)!)"
                 }
                 leftValueString = result
+                var numbersArray = result.components(separatedBy: ".")
+                if numbersArray[1] == "0" {
+                    result = numbersArray[0]
+                }
                 outputLabel.text = result
             }
             currentOperation = operation
