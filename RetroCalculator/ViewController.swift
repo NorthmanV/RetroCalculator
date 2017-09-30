@@ -121,9 +121,12 @@ class ViewController: UIViewController {
             currentOperation = operation
         } else {
             // This is the first time an operator has been pressed
-            leftValueString = runningNumber
-            runningNumber = ""
-            currentOperation = operation
+                leftValueString = runningNumber
+                runningNumber = ""
+                currentOperation = operation
+            if leftValueString == "" {
+                currentOperation = Operations.Empty
+            }
         }
     }
 
