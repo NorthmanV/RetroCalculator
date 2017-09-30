@@ -290,6 +290,7 @@
                     </view>
                     <connections>
                         <outlet property="outputLabel" destination="It1-Yx-pZ1" id="1d4-uw-IVS"/>
+                        <outlet property="zeroButton" destination="cVU-8k-A9J" id="DUi-K3-GwA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var zeroButton: UIButton!
     
     var btnSound: AVAudioPlayer!
     
@@ -55,8 +56,13 @@ class ViewController: UIViewController {
     
     @IBAction func numberPressed(sender: UIButton) {
         playSound()
-        runningNumber += "\(sender.tag)"
-        outputLabel.text = runningNumber
+        if sender.tag == 0 && runningNumber == "" {
+            runningNumber = ""
+            outputLabel.text = "0"
+        } else {
+            runningNumber += "\(sender.tag)"
+            outputLabel.text = runningNumber
+        }
     }
     
     @IBAction func onDividePressed(sender: AnyObject) {
